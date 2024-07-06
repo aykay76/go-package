@@ -1,9 +1,16 @@
 package thing
 
+import "fmt"
+
 type Thing struct {
-Name string
+	Name string
+}
+
+func (thing Thing) Hello() {
+	fmt.Println(thing.Name)
 }
 
 func init() {
-panic("package failed to init")
+	var t Thing
+	t.Hello()
 }
